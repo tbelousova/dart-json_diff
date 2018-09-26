@@ -62,7 +62,7 @@ class DiffNode {
     if (node != null) { node.forEach(ffn); }
   }
 
-  List<Object> map(void ffn(String s, DiffNode dn)) {
+  List<Object> map(dynamic ffn(String s, DiffNode dn)) {
     List result = new List();
     if (node != null) {
       forEach((s, dn) { result.add(ffn(s, dn)); });
